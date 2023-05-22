@@ -3,7 +3,8 @@
 def greetings(Hello):
     def our_greetings(func):
         def decorator():
-            print(f"{Hello}, {func}")
+            name = func()
+            print(f"{Hello}, {name}")
         return decorator
     return our_greetings
 
